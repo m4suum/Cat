@@ -1,19 +1,20 @@
 package cat;
 
 public class Cat {
-    private int name;
+    private String name;
     private int age;
-
-    public Cat(int name, int age) {
+    private String color;
+    public Cat(String name, int age, String color) {
         this.age = age;
         this.name = name;
+        this.color = color;
     }
 
-    public void setName(int name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public int getName() {
+    public String getName() {
         return this.name;
     }
 
@@ -25,9 +26,17 @@ public class Cat {
         return this.age;
     }
 
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getColor() {
+        return this.color;
+    }
+
     @Override
 
-    public String toString () {
-        return ("Cat:\nName " + this.name + "\nAge " + this.age);
+    public String toString() {
+        return ("Cat:\nName -> " + this.name + "\nAge -> " + this.age + "\nColor -> " + this.color);
     }
 }
