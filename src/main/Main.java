@@ -1,9 +1,8 @@
 package main;
 
-import cat.Cat;
+import animals.Cat;
 
 import java.util.ArrayList;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -19,9 +18,9 @@ public class Main {
         cats.add(cat3);
         cats.add(cat4);
         cats.add(cat5);
-        int [] nums = new int [100000000];
-        for (int i = 0; i < 100000000; i++){
-            nums [i] = i+1;
+        int[] nums = new int[100000000];
+        for (int i = 0; i < 100000000; i++) {
+            nums[i] = i + 1;
         }
 //        for (Cat cat : cats){
 //            System.out.println(cat + "\n");
@@ -49,10 +48,11 @@ public class Main {
         System.out.println("VALID_METHOD --->>> " + time2);
 
     }
-    public static void invalidSearch (int [] nums, int num){
+
+    public static void invalidSearch(int[] nums, int num) {
         boolean truth = false;
-        for (int i = 0; i < nums.length; i++){
-            if (nums [i] == num){
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == num) {
                 System.out.println("NUM'S_INDEX --->>> " + i);
                 truth = true;
                 break;
@@ -60,26 +60,30 @@ public class Main {
         }
         if (!truth) System.out.println("NO_NUM");
     }
-    public static void searchCat (ArrayList<Cat> cats){
+
+    public static void searchCat(ArrayList<Cat> cats) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter your cat's name ");
         String name = scanner.next();
         System.out.print("Enter your cat's age ");
         int age = scanner.nextInt();
         boolean result = false;
-        for (Cat cat : cats){
-            if ((cat.getName().toLowerCase()).equals(name.toLowerCase()) && cat.getAge() == age){
+        for (Cat cat : cats) {
+            if ((cat.getName().toLowerCase()).equals(name.toLowerCase()) && cat.getAge() == age) {
                 System.out.println(cat);
                 result = true;
                 break;
             }
-        } if (!result) System.out.println("There is no such cat");
+        }
+        if (!result) System.out.println("There is no such cat");
     }
-    public static void factorialComplexity (int n){ // O (n!) factorial complexity
-        for (int i = 0; i < n; i++){
-            factorialComplexity(n-1);
+
+    public static void factorialComplexity(int n) { // O (n!) factorial complexity
+        for (int i = 0; i < n; i++) {
+            factorialComplexity(n - 1);
         }
     }
+
     public static int binarySearch(int[] nums, int item) {
         if (nums.length == 0) {
             return -1;

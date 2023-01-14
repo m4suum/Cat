@@ -1,10 +1,11 @@
-package cat;
+package animals;
 
-public class Cat {
+public abstract class Animals {
     private String name;
     private int age;
     private String color;
-    public Cat(String name, int age, String color) {
+
+    public Animals(String name, int age, String color) {
         this.age = age;
         this.name = name;
         this.color = color;
@@ -37,6 +38,6 @@ public class Cat {
     @Override
 
     public String toString() {
-        return ("Cat:\nName -> " + this.name + "\nAge -> " + this.age + "\nColor -> " + this.color);
+        return ("Animal:\nName -> " + this.name + "\nAge -> " + this.age + "\nColor -> " + this.color);
     }
 }
