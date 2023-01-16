@@ -1,31 +1,45 @@
 package main;
 
-import enumlesson.Days;
+import enumlesson.Day;
+
+import java.util.Arrays;
 
 public class WorkWithEnum {
     public static void main(String[] args) {
-        System.out.println(Days.ВТОРНИК);
-        Days day = Days.ПОНЕДЕЛЬНИК;
+        System.out.println(Day.WEDNESDAY);
+
+        Day day1 = Day.FRIDAY;
+        System.out.println(day1.name());
+        System.out.println("Кол-во уроков в этот день --->>> " + day1.getLessons());
+
+        Day day2 = Day.valueOf("THURSDAY");
+        System.out.println(day2);
+        System.out.println("Кол-во уроков в этот день --->>> " + day2.getLessons());
+        System.out.println("INDEX OF DAY2 --->>> " + day2.ordinal());
+
+        System.out.println("WORK OF METHOD  VALUES --->>> " + Arrays.toString(Day.values()));
+
+        Day day = Day.WEDNESDAY;
         switch (day) {
-            case ПОНЕДЕЛЬНИК:
+            case MONDAY:
                 System.out.println("Учеба в {" + day.getDescription() + "}");
                 break;
-            case СРЕДА:
+            case WEDNESDAY:
                 System.out.println("Учеба в {" + day.getDescription() + "}");
                 break;
-            case ПЯТНИЦА:
+            case FRIDAY:
                 System.out.println("Учеба в {" + day.getDescription() + "}");
                 break;
-            case ВТОРНИК:
+            case TUESDAY:
                 System.out.println("Во {" + day.getDescription() + "} я не учусь");
                 break;
-            case ЧЕТВЕРГ:
+            case THURSDAY:
                 System.out.println("В {" + day.getDescription() + "} я не учусь");
                 break;
-            case СУББОТА:
+            case SATURDAY:
                 System.out.println("В {" + day.getDescription() + "} я не учусь");
                 break;
-            case ВОСКРЕСЕНЬЕ:
+            case SUNDAY:
                 System.out.println("В {" + day.getDescription() + "} я не учусь");
                 break;
 
