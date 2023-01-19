@@ -6,30 +6,28 @@ import java.util.Scanner;
 
 public class WorkWithString {
     public static void main(String[] args) {
-//        System.out.print("Введите слово ");
+        System.out.print("Введите слово ");
         Scanner scanner = new Scanner(System.in);
-//        String firstWord = scanner.next();
-//        String secondWord = firstWord.toLowerCase().replaceAll("а", "б");
-//        System.out.println(secondWord);
+        String firstWord = scanner.nextLine();
+        String secondWord = firstWord.toLowerCase().replaceAll("а", "б");
+        System.out.println("Все 'а' заменены на 'б' --->>> " + secondWord);
+        System.out.print("\nВведите строку ");
         String line = scanner.nextLine();
-        System.out.println("Ваша строка: " + line);
-        String [] words = line.split(" ");
-        System.out.println(Arrays.toString(words));
+        System.out.println("Ваша строка --->>> " + line);
+        String [] words = line.split(" +");
+        System.out.println("Массив получившийся из слов вашей сроки --->>> " + Arrays.toString(words));
         String max = words [0];
         for (int i = 0; i < words.length; i++){
             if (words [i].length() > max.length()){
                 max = words [i];
             }
         }
-
-        System.out.println("Самое длинное слово --->>> " + max + "\nДлина самого длинного слова --->>> " + max.length());
+        System.out.println("\nСамое длинное слово --->>> " + max + "\nДлина самого длинного слова --->>> " + max.length());
         System.out.println("Кол-во слов --->>> " + words.length);
-        System.out.println("Sub --->>> " + line.substring(2));
-        System.out.print("Введите ФИО ");
-        String surname = scanner.next();
-        String name = scanner.next();
-        String patronymic = scanner.next();
-        System.out.println((name.substring(0, 1) + ".") +(patronymic.substring(0, 1) + ". ") + surname );
+        System.out.print("\nВведите ФИО ");
+        String snp = scanner.nextLine();
+        String [] name = snp.split(" +");
+        System.out.println((name[1].substring(0, 1).toUpperCase() + ".") +(name[2].substring(0, 1).toUpperCase() + ". ") + name [0].substring(0,1).toUpperCase() + name [0].substring(1).toLowerCase());
 
     }
 }
