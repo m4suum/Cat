@@ -1,4 +1,4 @@
-package main;
+package enumlesson;
 
 import enumlesson.Day;
 
